@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Quizz.Models.USER_REPORT>
+
+@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_LayoutA.cshtml";
+}
+<body bgcolor="green">
+<h1 style="font-family:Comic Sans Ms;text-align:center" >Candidate Reports</h1>
+
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_SCORE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAX_MARKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_PAPER)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_SCORE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAX_MARKS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_PAPER)
+        </td>
+        <td>
+  
+           
+        </td>
+    </tr>
+}
+
+</table>
+    </body>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+  
+   
+</head>
+<body>
+    <div class="row">
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height:900px;border:1px solid gray; background-color:#808080">
+            <div style="width:100%" class="list-group">
+                @*<a href="http://localhost:57487/Home/Dashboard" class="list-group-item ">Report</a>
+        <a href="http://localhost:57487/Home/Addcategory" class="list-group-item ">Add new category</a>
+        <a href="http://localhost:57487/Home/Addquestion" class="list-group-item ">Add Questions</a>*@
+
+                <div class="list-group-item">
+                    @Html.ActionLink("Add Category", "Addcategory", new { @class = "list-group-item" })
+                </div>
+                <div class="list-group-item">
+                    @Html.ActionLink("Add Questions", "Addquestion", new { @class = "list-group-item" })
+                </div>
+                <div class="list-group-item">
+                    @Html.ActionLink("View Reports", "Report", new { @class = "list-group-item" })
+                </div>
+                <div class="list-group-item">
+                    @Html.ActionLink("View Question", "Viewquestion", new { @class = "list-group-item" })
+                </div>
+                <div class="list-group-item">
+                    @Html.ActionLink("Set Exam Paper", "SetPaper", new { @class = "list-group-item" })
+                </div>
+
+                <div class="list-group-item">
+                    @Html.ActionLink("Logout", "Logout", new { @class = "list-group-item" })
+                </div>
+
+
+                @*<a href="http://localhost:57487/Home/Addcategory">Add a new category</a>
+        <a href="http://localhost:57487/Home/Addquestion">Add a new question</a>*@
+
+
+            </div>
+             
+
+
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:900px;border:1px solid gray">
+
+
+            @RenderBody()
+
+        </div>
+
+
+
+    </div>
+
+
+   
+</body>
+</html>

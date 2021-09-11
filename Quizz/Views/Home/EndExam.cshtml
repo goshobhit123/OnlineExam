@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title>EndExam</title>
+</head>
+<body>
+    <style>
+        body {
+            background-image:radial-gradient(#ff6a00,#b6ff00);
+            background-size: cover;
+        }
+    </style>
+
+
+
+    <div>
+        <h1 style="font-family:Algerian;font-size:x-large;color:Green;text-align:center">Thank You</h1>
+        <br>
+        <h1 style="font-family:Algerian;font-size:xx-large;color:Green;text-align:center">your score is @Session["MAX"] %</h1>
+        <center>
+            @using (Html.BeginForm("EndExam", "Home", FormMethod.Post, null))
+            {
+                <input type="submit" value="Exit" class="btn btn-success" />
+
+
+            }
+
+
+                <h3>correct:@Session["Score"]<br /></h3>
+                <h3> Total questions:@Session["countq"]</h3>
+</center>
+        
+
+    </div>
+</body>
+</html>

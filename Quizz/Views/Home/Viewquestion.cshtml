@@ -1,0 +1,33 @@
+﻿@model Quizz.Models.TBL_QUESTIONS
+@{
+    ViewBag.Title = "Viewquestion";
+    Layout = "~/Views/Shared/_LayoutA.cshtml";
+}
+
+<h1 style="font-family:Comic Sans Ms;text-align:center">Question Panel</h1>
+@using (Html.BeginForm("Viewquestion","Home",FormMethod.Post))
+{
+
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.LabelFor(model => model.q_fk_catid, "q_fk_catid", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("q_fk_catid", ViewBag.list as SelectList,"---select---", htmlAttributes: new { @class = "form-control" })
+            
+
+            @Html.ValidationMessageFor(model => model.q_fk_catid, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <input type="submit" value="submit" name="button1" class="btn btn-success" />
+</div>
+
+    
+
+}
+
+
+
+
+
+
+
